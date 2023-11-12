@@ -2,6 +2,9 @@
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-duration: 250ms;
 }
+ul{
+  list-style: none;
+}
 
 .gallery {
   display: grid;
@@ -12,6 +15,7 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 .gallery__item {
