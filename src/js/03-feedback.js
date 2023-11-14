@@ -27,7 +27,7 @@ fillContactFormField();
 const onContactFormFieldChange = ({ target: contactFormField }) => {
   const contactFormFieldValue = contactFormField.value;
   const contactFormFieldName = contactFormField.name;
-  console.log('userData: ', userData);
+  // console.log('userData: ', userData);
   userData[contactFormFieldName] = contactFormFieldValue;
 
   localStorage.setItem(STOKE_KEY, JSON.stringify(userData) );
@@ -36,9 +36,11 @@ const onContactFormFieldChange = ({ target: contactFormField }) => {
 
 const onContactFormSubmit = event => {
   event.preventDefault();
+  console.log(userData)
 
   contactFormEl.reset();
   localStorage.removeItem(STOKE_KEY);
+  userData={}
 };
 
 contactFormEl.addEventListener('input', trottle(onContactFormFieldChange, 500));
